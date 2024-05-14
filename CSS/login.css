@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+:root{
+    --color-primary: #04346F;
+    --color-primary-dark: #001c40;
+    --color-secundary: #ffffff;
+    --color-green: #5ACCA4;
+    --color-orange: #FE654F;
+    --color-yellow: #E6CA52;
+    --color-purple: #EAA2FC;
+    --color-gray-transparent: rgba(76, 76, 76, 0.6);
+    --font-principal: "PT Sans", sans-serif;
+}
+
+body{
+    font-family: var(--font-principal);
+    background-color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 60%; 
+    margin: auto;
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.container .banner{
+    width: 500px;
+    height: 420px;
+    background-image: url(/IMG/wolfImage.jpeg);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 20px 0px 0px 20px;
+}
+
+
+.container .bannerMobile{
+    display: none;
+}
+
+.container .banner h1{
+    top: 20px;
+    font-size: 60px;
+    text-align: center;
+    background: var(--color-gray-transparent);
+    border-radius: 50px;
+    color: var(--color-secundary);
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 100;
+    margin: 10px;
+}
+
+.container .form{
+    width: 500px;
+    height: 420px;
+    background-color: var(--color-secundary);
+    border-radius: 0px 20px 20px 0px;
+}
+
+.container .form form .containerLines{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .form form .containerLines img{
+    width: 160px;
+    height: 60px;
+}
+.container form h1{
+    font-size: 36px;
+    margin-top: 40px;
+    margin-left: 35px;
+    margin-bottom: 40px;
+}
+
+.container form .formGroup{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin: 0 35px 30px;
+    font-size: 18px;
+}
+
+.container form .formGroup input{
+    border: none;
+    border-bottom: 4px solid var(--color-primary);
+    outline: none;
+    font-size: 17px;
+    margin-top: 5px;
+    font-family: "PT Sans", sans-serif;
+}
+
+.container .form form button{
+    display: flex;
+    margin-left: auto;
+
+    margin-right: 35px;
+}
+
+.buttonBlue {
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-family: var(--font-principal);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Agregar transición para suavizar el cambio */
+}
+
+.buttonBlue:hover {
+    background-color: var(--color-primary-dark)
+}
+
+
+.container .form .footerForm{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .form .footerForm p{
+    margin-left: 5%;
+}
+
+.container .form .footerForm p a{
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+footer{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-secundary);
+}
+
+footer span{
+    background-color: var(--color-secundary);
+    color: var(--color-primary);
+}
+
+
+
+@media (max-width: 768px){
+    .container {
+        display: inline;
+        margin: auto;
+    }
+
+    .container .banner {
+        display: none;
+    }
+
+    .container .form form .containerLines img{
+        width: 140px;
+        height: 50px;
+    }
+
+    .container .bannerMobile {
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        width: 50px;
+        height: 120px;
+        text-align: center;
+    }
+
+    .container .form {
+        width: 85%; 
+        margin: 0% auto;
+        height: 470px;
+        border-radius: 20px;
+        margin-top: 20px;
+    }
+
+    .container .form .footerForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
