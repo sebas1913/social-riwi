@@ -6,7 +6,7 @@ Esta documentación detalla el desarrollo de una red social dedicada al Clan Ber
 ## Índice
 1. [Descripción General](#descripción-general)
 2. [Historias de Usuario](#historias-de-usuario)
-3. [Requisitos No Funcionales](#requisitos-no-funcionales)
+3. [Requisitos Funcionales](#requisitos-funcionales)
 4. [Metodología de Desarrollo](#metodología-de-desarrollo)
 5. [Equipo de Desarrollo](#equipo-de-desarrollo)
 6. [Plan de Pruebas](#plan-de-pruebas)
@@ -30,7 +30,7 @@ El desarrollo inicial se centrará en la implementación de la red social para e
 
 ## Historias de Usuario
 ### Perfiles de Usuario
-- Creación de perfiles individuales para cada miembro del clan Riwi con información básica (nombre, biografía, intereses, ubicación) y foto de perfil.
+- Creación de perfiles individuales para cada miembro del clan Riwi con información básica (nombre, biografía, intereses, skills) y foto de perfil.
 - Capacidad de editar y actualizar el perfil de usuario.
 
 ### Publicaciones
