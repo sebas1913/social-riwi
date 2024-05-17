@@ -90,6 +90,8 @@ Se seguirá una metodología ágil, como Scrum, para el desarrollo iterativo e i
 
 ## Prototipo
 ![Diagrama de flujo](IMG/Login.png)
+![Diagrama de flujo](IMG/Feed.png)
+
 
 
 ---
