@@ -1,4 +1,4 @@
-# Red Social para el Clan Berners Lee
+# Social Riwi
 
 ## Descripción
 Esta documentación detalla el desarrollo de una red social dedicada al Clan Berners Lee del centro de entrenamiento Riwi en Medellín. Este proyecto surge como respuesta a la necesidad de establecer una plataforma que facilite la interacción y colaboración entre sus miembros, así como la difusión de contenido relacionado con la programación y proyectos. El grupo de desarrollo, integrado por Cristina Valencia Ospina, Sebastián Osorno Castrillón, Oscar Camilo Calle Gil y José Miguel Atehortúa, busca mediante esta iniciativa mejorar la conexión entre los miembros del clan Berners Lee y potenciar su desarrollo profesional en el ámbito de la programación.
@@ -48,7 +48,7 @@ El desarrollo inicial se centrará en la implementación de la red social para e
 - Capacidad de crear y administrar proyectos colaborativos dentro de la red social.
 - Asignación de tareas y seguimiento del progreso de los proyectos.
 
-## Requisitos No Funcionales
+## Requisitos Funcionales
 ### Escalabilidad
 La plataforma debe ser capaz de manejar un crecimiento significativo de usuarios y actividad.
 
@@ -86,11 +86,15 @@ Se seguirá una metodología ágil, como Scrum, para el desarrollo iterativo e i
 - Se implementarán pruebas de seguridad para identificar y mitigar posibles vulnerabilidades.
 
 ## Diagrama de flujo
-![Diagrama de flujo](https://balsamiq.cloud/s9wbw36/pooml4k)
+![Diagrama de flujo](PRENDIENTE)
 
 ## Prototipo
 ![Diagrama de flujo](IMG/Login.png)
 ![Diagrama de flujo](IMG/Feed.png)
+![Diagrama de flujo](IMG/UserProfile.png)
+![Diagrama de flujo](IMG/Settings.png)
+![Diagrama de flujo](IMG/updateUser.png)
+![Diagrama de flujo](IMG/updatePassword.png)
 
 
 
