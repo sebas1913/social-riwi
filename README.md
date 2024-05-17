@@ -12,6 +12,7 @@ Esta documentación detalla el desarrollo de una red social dedicada al Clan Ber
 6. [Plan de Pruebas](#plan-de-pruebas)
 7. [Diagrama de flujo](#diagrama-de-flujo)
 8. [Prototipo](#prototipo)
+9. [Tablero de actvidades](#tablero)
 
 ## Descripción General
 ### Objetivo General
@@ -86,7 +87,7 @@ Se seguirá una metodología ágil, como Scrum, para el desarrollo iterativo e i
 - Se implementarán pruebas de seguridad para identificar y mitigar posibles vulnerabilidades.
 
 ## Diagrama de flujo
-![Diagrama de flujo](PRENDIENTE)
+![Diagrama de flujo](PENDIENTE)
 
 ## Prototipo
 ![Diagrama de flujo](IMG/Login.png)
@@ -96,6 +97,9 @@ Se seguirá una metodología ágil, como Scrum, para el desarrollo iterativo e i
 ![Diagrama de flujo](IMG/updateUser.png)
 ![Diagrama de flujo](IMG/updatePassword.png)
 
+
+## Tablero
+https://trello.com/invite/b/63Wwz9ZE/ATTI06bc147582a71b6f653553f5a819ef18E6F11F70/red-social-riwi
 
 
 ---
