@@ -96,6 +96,7 @@ Se seguirá una metodología ágil, como Scrum, para el desarrollo iterativo e i
 ![Diagrama de flujo](IMG/Settings.png)
 ![Diagrama de flujo](IMG/updateUser.png)
 ![Diagrama de flujo](IMG/updatePassword.png)
+![Diagrama de flujo](IMG/Diagram.png)
 
 
 ## Tablero
