@@ -73,7 +73,7 @@ nav ul li a i{
     .navMobile{
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         background-color: var(--color-primary-dark);
         color: var(--color-secondary);
         width: 100%;
@@ -81,18 +81,15 @@ nav ul li a i{
         margin: 0;
         padding: 0;
     }
-    nav ul{
+    .navMobile ul{
+        display: flex;
         flex-direction: row;
+    }
+    nav ul li {
+        margin: 0;
     }
     nav ul li a i{
         font-size: 25px;
-    }
-    nav .socialNetworkLogo{
-        width: 70px;
-        margin-bottom: 10px;
-    }
-    .linesRiwi{
-        display: none;
     }
     .navDesktop{
         display: none;
@@ -101,5 +98,9 @@ nav ul li a i{
         margin-left: 0%;
         padding: 20px;
         margin-top: 15%;
+    }
+    .socialNetworkLogo{
+        transform: scaleX(-1);
+
     }
 }
