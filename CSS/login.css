@@ -104,7 +104,6 @@ body{
 .container .form form button{
     display: flex;
     margin-left: auto;
-
     margin-right: 35px;
 }
 
@@ -117,13 +116,7 @@ body{
     font-size: 16px;
     cursor: pointer;
     font-family: var(--font-principal);
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Agregar transición para suavizar el cambio */
 }
-
-.buttonBlue:hover {
-    background-color: var(--color-primary-dark)
-}
-
 
 .container .form .footerForm{
     margin-top: 20px;
