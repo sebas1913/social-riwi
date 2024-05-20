@@ -4,7 +4,7 @@
 :root{
     --color-primary: #04346F;
     --color-primary-dark: #021D3D;
-    --color-secondary: #ffffff;
+    --color-secundary: #ffffff;
     --color-green: #5ACCA4;
     --color-orange: #FE654F;
     --color-yellow: #E6CA52;
@@ -12,93 +12,42 @@
     --color-gray-transparent: rgba(76, 76, 76, 0.6);
     --font-principal: "PT Sans", sans-serif;
 }
+
 body{
     font-family: var(--font-principal);
     background-color: var(--color-primary);
     margin: 0;
     padding: 0;
 }
-nav {
-    width: 20%;
-    background-color: var(--color-primary-dark);
-    color: var(--color-secondary);
-    padding-top: 20px;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
-nav .socialNetworkLogo{
-    width: 100px;
-}
-nav ul {
-    list-style: none;
+
+.containerPublication{
+    margin: auto;
+    width: 60%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 0;
-}
-nav ul li {
-    font-size: 20px;
-}
-nav ul li:hover {
-    cursor: pointer;
-}
-nav ul li a {
-    color: var(--color-secondary);
-    text-decoration: none;
-    font-weight: 800;
-}
-nav ul li a i{
-    padding: 12px;
-    font-size: 30px;
-}
-.mainContent {
-    margin-left: 22%;
-    padding: 20px;
-}
-.linesRiwi{
-    width: 170px;
-    position: absolute;
-    right: 0;
-    bottom: 50px;
-}
-.navMobile{
-    display: none;
+    background-color: var(--color-secundary);
+    border-radius: 40px;
+    color: var(--color-primary);
+
 }
 
-@media (max-width: 850px){
-    .navMobile{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: var(--color-primary-dark);
-        color: var(--color-secondary);
-        width: 100%;
-        height: 12%;
-        margin: 0;
-        padding: 0;
-    }
-    .navMobile ul{
-        display: flex;
-        flex-direction: row;
-    }
-    nav ul li {
-        margin: 0;
-    }
-    nav ul li a i{
-        font-size: 22px;
-    }
-    .navDesktop{
-        display: none;
-    }
-    .mainContent {
-        margin-left: 0%;
-        padding: 20px;
-        margin-top: 15%;
-    }
-    .socialNetworkLogo{
-        transform: scaleX(-1);
-    }
+.containerPublication .publicationLeft{
+    display: inline-flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.containerPublication .publicationLeft i{
+    padding: 20px;
+    font-size: 30px;
+}
+
+.containerPublication .publicationRight{
+    margin-right: 30px;
+}
+
+.containerPublication .publicationRight a{
+    color: var(--color-primary);
+    font-size: 25px;
 }
