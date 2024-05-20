@@ -40,7 +40,6 @@ nav ul {
     padding: 0;
 }
 nav ul li {
-    margin-bottom: 30px;
     font-size: 20px;
 }
 nav ul li:hover {
@@ -89,7 +88,7 @@ nav ul li a i{
         margin: 0;
     }
     nav ul li a i{
-        font-size: 25px;
+        font-size: 22px;
     }
     .navDesktop{
         display: none;
@@ -101,6 +100,5 @@ nav ul li a i{
     }
     .socialNetworkLogo{
         transform: scaleX(-1);
-
     }
 }
