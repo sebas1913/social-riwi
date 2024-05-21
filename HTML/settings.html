@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="/CSS/nav.css">
     <link rel="stylesheet" href="/CSS/feed.css">
     <link rel="stylesheet" href="/CSS/settings.css">
+    <link rel="stylesheet" href="/CSS/darkMode.css">
     <link rel="shortcut icon" href="/IMG/logoSocialRiwi.png" type="image/x-icon">
+    <script src="/JS/darkMode.js"></script>
     <title>Settings</title>
 </head>
 <body>
@@ -55,7 +57,7 @@
         <div class="card">
             <ul>
                 <li>
-                    <a href="/HTML/profileUser.html"><i class="fa-solid fa-user"></i>Update user</a>
+                    <a href="/HTML/updateUser.html"><i class="fa-solid fa-user"></i>Update user</a>
                 </li>
                 <li>
                     <a href="/HTML/updatePassword.html"><i class="fa-solid fa-lock"></i>Update password</a>
@@ -64,7 +66,7 @@
                     <a href=""><i class="fa-solid fa-trash"></i>Delete account</a>
                 </li>
                 <li>
-                    <a href=""><i class="fa-solid fa-circle"></i>Dark mode</a>
+                    <a id="changeMode" onclick="darkMode()"><i class="fa-solid fa-circle"></i>Dark Mode</a>
                 </li>
             </ul>            
             <img src="/IMG/linesLogo.png" alt="">

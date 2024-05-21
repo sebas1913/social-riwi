@@ -1,28 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
-
-:root{
-    --color-primary: #04346F;
-    --color-primary-dark: #021D3D;
-    --color-secundary: #ffffff;
-    --color-green: #5ACCA4;
-    --color-orange: #FE654F;
-    --color-yellow: #E6CA52;
-    --color-purple: #EAA2FC;
-    --color-gray-transparent: rgba(76, 76, 76, 0.6);
-    --font-principal: "PT Sans", sans-serif;
-}
-
 .mainContent h1{
     font-size: 65px;
-    color: var(--color-secondary);
+    color: var(--color-secundary);
     margin-left: 70px;
     
 }
 
 .mainContent .card {
     width: 45%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     border-radius: 20px;
     margin-left: 70px;
     padding: 50px 60px;
@@ -70,7 +55,7 @@
 
 .mainContent .card {
     width: 70%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     border-radius: 20px;
     padding: 50px 30px;
     position: relative;

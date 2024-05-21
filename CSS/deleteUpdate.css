@@ -1,12 +1,12 @@
 .mainContent h1{
     font-size: 65px;
-    color: var(--color-secondary);
+    color: var(--color-secundary);
     margin-left: 70px;
 }
 
 .mainContent .card{
     width: 45%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     border-radius: 20px;
     margin-left: 70px;
     padding: 40px 50px;
