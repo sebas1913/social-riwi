@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+:root{
+    --color-primary: #04346F;
+    --color-primary-dark: #021D3D;
+    --color-secundary: #ffffff;
+    --color-green: #5ACCA4;
+    --color-orange: #FE654F;
+    --color-yellow: #E6CA52;
+    --color-purple: #EAA2FC;
+    --color-gray-transparent: rgba(76, 76, 76, 0.6);
+    --font-principal: "PT Sans", sans-serif;
+}
+
+.mainContent h1{
+    font-size: 65px;
+    color: var(--color-secondary);
+    margin-left: 70px;
+    
+}
+
+.mainContent .card {
+    width: 45%;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    margin-left: 70px;
+    padding: 50px 60px;
+    position: relative;
+    text-decoration: none;
+    
+}
+
+.card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+    
+
+.card ul li a {
+    display: flex;
+    color: var(--color-primary);
+    font-weight: 700;
+    margin: 0 25px 20px;
+    font-size: 20px;
+    gap: 20px;
+    text-decoration: none;
+}
+
+.card ul li a i{
+    font-size: 27px;
+}
+
+.mainContent .card img{
+    margin-top: 0;
+    top: 65%;
+    width: 200px;
+    position: absolute;
+    right: 0;
+}
+
+
+
