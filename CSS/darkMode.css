@@ -1,0 +1,18 @@
+
+.darkMode {
+    background-color: var(--color-black-body);
+    color: var(--color-secundary);
+}
+
+.darkMode nav{
+    background-color: var(--color-black);
+}
+
+.darkMode .mainContent .card{
+    background-color: var(--color-black-card);
+}
+
+.darkMode .mainContent .card input{
+    background-color: var(--color-black-card);
+
+}

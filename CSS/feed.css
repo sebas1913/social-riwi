@@ -9,6 +9,9 @@
     --color-orange: #FE654F;
     --color-yellow: #E6CA52;
     --color-purple: #EAA2FC;
+    --color-black: #000000;
+    --color-black-body: #0f0f0f;
+    --color-black-card : rgb(203, 203, 203);
     --color-gray-transparent: rgba(76, 76, 76, 0.6);
     --font-principal: "PT Sans", sans-serif;
 }

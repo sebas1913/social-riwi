@@ -4,11 +4,14 @@
 :root{
     --color-primary: #04346F;
     --color-primary-dark: #021D3D;
-    --color-secondary: #ffffff;
+    --color-secundary: #ffffff;
     --color-green: #5ACCA4;
     --color-orange: #FE654F;
     --color-yellow: #E6CA52;
     --color-purple: #EAA2FC;
+    --color-black: #000000;
+    --color-black-body: #0f0f0f;
+    --color-black-card : rgb(221, 221, 221);
     --color-gray-transparent: rgba(76, 76, 76, 0.6);
     --font-principal: "PT Sans", sans-serif;
 }
@@ -21,7 +24,7 @@ body{
 nav {
     width: 20%;
     background-color: var(--color-primary-dark);
-    color: var(--color-secondary);
+    color: var(--color-secundary);
     padding-top: 20px;
     position: fixed; 
     top: 0;
@@ -46,7 +49,7 @@ nav ul li:hover {
     cursor: pointer;
 }
 nav ul li a {
-    color: var(--color-secondary);
+    color: var(--color-secundary);
     text-decoration: none;
     font-weight: 800;
 }
@@ -69,7 +72,7 @@ nav ul li a i{
 }
 .buttonBlue {
     background-color: var(--color-primary);
-    color: var(--color-secondary);
+    color: var(--color-secundary);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -86,7 +89,7 @@ nav ul li a i{
         justify-content: space-between;
         align-items: center;
         background-color: var(--color-primary-dark);
-        color: var(--color-secondary);
+        color: var(--color-secundary);
         width: 100%;
         height: 10%;
         margin: 0;
