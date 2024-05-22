@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+15&display=swap');
+
+:root{
+    --color-primary: #04346F;
+    --color-primary-dark: #021D3D;
+    --color-secundary: #ffffff;
+    --color-green: #5ACCA4;
+    --color-orange: #FE654F;
+    --color-yellow: #E6CA52;
+    --color-purple: #EAA2FC;
+    --color-gray-transparent: rgba(76, 76, 76, 0.6);
+    --font-principal: "PT Sans", sans-serif;
+}
+
+body{
+    font-family: var(--font-principal);
+    background-color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+}
+.mainContent h1{
+    font-size: 30px;
+    color: var(--color-primary);
+    margin-bottom: 0;
+    
+}
+
+.mainContent h2 {
+    font-size: 20px;
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+.mainContent .card {
+    text-align: center;
+    width: 55%;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 10px 60px;
+    position: relative;
+    text-decoration: none;
+    margin-left: 90px;
+    
+
+}
+
+.user img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    background-color: var(--color-primary);
+
+}
+
