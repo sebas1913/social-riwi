@@ -25,11 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (data.length === 0) {
       console.error("No existe un usuario con ese email");
+      alert("No tienes cuenta, regístrate :)")
       return;
     }
 
     if (data[0].password !== password.value) {
       console.error("Password incorrecta");
+      alert("Incorrect password")
       return;
     }
 

@@ -23,7 +23,6 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: "PT Sans", sans-serif;
     overflow: hidden;
     height: 100vh;
     margin: 0;
@@ -32,16 +31,19 @@ body {
 
 h1 {
     font-weight: 700;
-    letter-spacing: -1.5px;
+    font-size: 50px;
+    padding: 10px;
+    border-radius: 20px;
     margin: 0;
-    margin-bottom: 15px;
 }
 
 h1.title { 
+    background-color: rgb(0, 0, 0, 0.3);
+    width: 80%;
+    font-weight: 500;
     font-size: 45px;
-    line-height: 45px;
-    margin: 0;
-    text-shadow: 0 0 10px rgba(16, 64, 74, 0.5);
+    font-family: "Jersey 15", sans-serif;
+
 }
 
 p {
@@ -78,12 +80,6 @@ a:hover {
     justify-content: space-around;
 }
 
-.content .checkbox {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .content input {
    accent-color: #333;
    width: 12px;
@@ -102,21 +98,21 @@ button {
     border: 1px solid var(--color-secundary);
     background-color: var(--color-primary);
     color: var(--color-secundary);
-    font-size: 15px;
-    font-weight: 700;
+    font-family: var(--font-principal);
+    font-size: 18px;
+    font-weight: 600;
     margin: 10px;
     padding: 12px 80px;
-    letter-spacing: 1px;
-    text-transform: capitalize;
     transition: 0.3s ease-in-out;
 }
 
 button:hover {
-    letter-spacing: 3px;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
 
 button:active {
-    transform: scale(0.95);
+    transform: scale(1);
 }
 
 button:focus { 
@@ -127,30 +123,6 @@ button.ghost {
     background-color: var(--color-primary);
     border: 2px solid var(--color-secundary);
     color: var(--color-secundary);
-}
-
-button.ghost i {
-    position: absolute;
-    opacity: 1;
-    transition: 0.3s ease-in-out;
-}
-
-button.ghost i.register {
-    right: 70px;
-}
-
-button.ghost i.login {
-    left: 70px;
-}
-
-button.ghost:hover i.register {
-    right: 40px;
-    opacity: 1;
-}
-
-button.ghost:hover i.login {
-    left: 40px;
-    opacity: 1;
 }
 
 form { 
@@ -165,12 +137,12 @@ form {
 }
 
 input {
-    background-color: #eee;
-    border-radius: 10px;
     border: none;
     padding: 12px 15px;
     margin: 8px 0;
     width: 100%;
+    font-family: var(--font-principal);
+    font-size: 18px;
 }
 
 .container {
@@ -268,7 +240,7 @@ input {
     bottom: 0;
     background: linear-gradient(
         to top,
-        rgba(4, 52, 111) 1%,
+        rgba(4, 52, 111) 10%,
         rgba(9, 98, 200, 0.126) 30%
     );
 }
@@ -281,7 +253,7 @@ input {
     position: absolute;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
     padding: 0 40px;
     text-align: center;
@@ -307,24 +279,4 @@ input {
 
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
-}
-
-.social-container {
-    margin: 20px 0;
-}
-
-.social-container a {
-    border: 1px solid #dddddd;
-    border-radius: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    height: 40px;
-    width: 40px;
-    transition: 0.3s ease-in-out;
-}
-
-.social-container a:hover {
-    border: 1px solid var(--color-primary);
 }
