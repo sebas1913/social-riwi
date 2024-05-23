@@ -2,54 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/CSS/login.css">
-    <link rel="stylesheet" href="/CSS/darkMode.css">
-    <link rel="shortcut icon" href="/IMG/cellphone.png" type="image/x-icon">
-    <script src="/JS/darkMode.js"></script>
     <title>Login</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+    <link href="../CSS/login.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../IMG/riwiLogo.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container">
-        <!-- Banner for desktop site-->
-        <div class="banner">
-            <h1> < Hello coder /> </h1>
-        </div>
-        <!-- Banner for mobile-->
+    <div class="container" id="container">
         <div class="bannerMobile">
-            <img src="/IMG/cellphone.png" alt="">
+            <img src="../IMG/cellphone.png" alt="">
         </div>
-
-        <div class="form">
-            <form action="">
-                <div class="containerLines">
-                    <h1>Log In</h1>
-                    <img src="/IMG/linesLogo.png" alt="">
+        <div class="form-container register-container">
+            <form id="formRegister">
+                <h1>Register</h1>
+                <input type="text" id="registerName" placeholder="Name" required>
+                <input type="email" id="registerEmail" placeholder="Email" required>
+                <input type="password" id="registerPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+                <span>or use your account</span>
+                <div class="social-container">
+                    <a href="#" id="google-login" class="social"><i class="lni lni-google"></i></a>
+        
                 </div>
-
-                <div class="formGroup">
-                    <label for="user">Username</label>
-                    <input type="text" id="username" name="user">
-                </div>
-                <div class="formGroup">
-                    <label for="pass">Password</label>
-                    <input type="password" id="password" name="pass">
-                </div>
-                <button class="buttonBlue" type="submit">Login</button>
             </form>
-
-            <div class="footerForm">
-                <p>You do not have an account? <a href=""> Sign up</a></p>
-                <a href="https://riwi.io/" target="_blank" title="Enlace a sitio web de Riwi"><img src="/IMG/riwiLogo.png" width="50px" alt="Logo Riwi"></a>
+        </div>
+        <div class="form-container login-container">
+            <form id="formLogin">
+                <h1>Log in</h1>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <div class="content">
+                    <div class="checkbox">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox">Remember me</label>
+                    </div>
+                    <div class="pass-link">
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </div>
+                <button type="submit">Login</button>
+                <span>or use your account</span>
+                <div class="social-container">
+                    <a href="#" id="google-login" class="social"><i class="lni lni-google"></i></a>
+                 
+                </div>
+                
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1 class="title">Hello coder/></h1>
+                    <p>You do not have an account?</p>
+                    <button class="ghost" id="login">Login<i class="lni lni-arrow-left login"></i></button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1 class="title">Start your <br>journey now</h1>
+                    <p>If you don't have an account yet, join us and start your journey.</p>
+                    <button class="ghost" id="register">Register<i class="lni lni-arrow-right register"></i></button>
+                </div>
             </div>
         </div>
-        
     </div>
-
-    <footer>
-        <p>Be a coder, <span>change</span> your world</p>
-    </footer>
-
-    <script src="/JS/validationLogin.js"></script>
+    <script src="../JS/validationLogin.js"></script>
+    <script src="../JS/main.js" type="module"></script>
 </body>
 </html>

@@ -1,15 +1,13 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('El DOM ha sido completamente cargado.');
+const registerButton = document.getElementById("register");
+const loginButton = document.getElementById("login");
+const container = document.getElementById("container");
 
-    const form = document.querySelector('form');
+registerButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+})
 
-    form.addEventListener('submit', (event) => {
-        const usernameValue = document.querySelector('#username').value.trim();
-        const passwordValue = document.querySelector('#password').value.trim();
+loginButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+})
 
-        if (usernameValue === '' || passwordValue === '') {
-            event.preventDefault();
-            alert('Completa todos los campos :)');
-        }
-    });
-});
+
