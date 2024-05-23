@@ -16,3 +16,7 @@
     background-color: var(--color-black-card);
 
 }
+
+.darkMode .modal-content {
+    color: var(--color-black);
+}

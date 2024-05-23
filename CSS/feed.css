@@ -32,7 +32,6 @@ body{
     background-color: var(--color-secundary);
     border-radius: 40px;
     color: var(--color-primary);
-
 }
 
 .containerPublication .publicationLeft{
@@ -42,7 +41,7 @@ body{
 }
 
 .containerPublication .publicationLeft i{
-    padding: 20px;
+    padding: 0px 10px;
     font-size: 30px;
 }
 
