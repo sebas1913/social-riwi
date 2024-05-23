@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
     <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
     <link href="../CSS/login.css" rel="stylesheet">
-    <link rel="shortcut icon" href="../IMG/riwiLogo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../IMG/logoSocialRiwi.png" type="image/x-icon">
+    <title>Login</title>
 </head>
 <body>
     <div class="container" id="container">
-        <div class="bannerMobile">
-            <img src="../IMG/cellphone.png" alt="">
-        </div>
         <div class="form-container register-container">
             <form id="formRegister">
                 <h1>Register</h1>
@@ -21,11 +18,6 @@
                 <input type="email" id="registerEmail" placeholder="Email" required>
                 <input type="password" id="registerPassword" placeholder="Password" required>
                 <button type="submit">Register</button>
-                <span>or use your account</span>
-                <div class="social-container">
-                    <a href="#" id="google-login" class="social"><i class="lni lni-google"></i></a>
-        
-                </div>
             </form>
         </div>
         <div class="form-container login-container">
@@ -33,35 +25,17 @@
                 <h1>Log in</h1>
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="password" id="password" placeholder="Password" required>
-                <div class="content">
-                    <div class="checkbox">
-                        <input type="checkbox" name="checkbox" id="checkbox">
-                        <label for="checkbox">Remember me</label>
-                    </div>
-                    <div class="pass-link">
-                        <a href="#">Forgot password?</a>
-                    </div>
-                </div>
-                <button type="submit">Login</button>
-                <span>or use your account</span>
-                <div class="social-container">
-                    <a href="#" id="google-login" class="social"><i class="lni lni-google"></i></a>
-                 
-                </div>
-                
+                <button class="button" type="submit">Login</button>
             </form>
         </div>
         <div class="overlay-container">
             <div class="overlay">
                 <div class="overlay-panel overlay-left">
-                    <h1 class="title">Hello coder/></h1>
-                    <p>You do not have an account?</p>
-                    <button class="ghost" id="login">Login<i class="lni lni-arrow-left login"></i></button>
+                    <button class="ghost" id="login">Login</button>
                 </div>
                 <div class="overlay-panel overlay-right">
-                    <h1 class="title">Start your <br>journey now</h1>
-                    <p>If you don't have an account yet, join us and start your journey.</p>
-                    <button class="ghost" id="register">Register<i class="lni lni-arrow-right register"></i></button>
+                    <h1 class="title"> < Hello coder/></h1>
+                    <button class="ghost" id="register">Register</button>
                 </div>
             </div>
         </div>
