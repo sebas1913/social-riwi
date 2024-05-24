@@ -23,33 +23,32 @@ body{
     font-size: 30px;
     color: var(--color-primary);
     margin-bottom: 0;
-    
-}
-
-.mainContent h2 {
-    font-size: 20px;
-    color: var(--color-primary);
-    margin-top: 0;
 }
 
 .mainContent .card {
     text-align: center;
+    margin: 0 auto;
     width: 55%;
-    background-color: var(--color-secondary);
+    background-color: var(--color-secundary);
     border-radius: 20px;
-    padding: 10px 60px;
-    position: relative;
-    text-decoration: none;
-    margin-left: 90px;
-    
-
+    padding: 30px;
 }
 
 .user img{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
     background-color: var(--color-primary);
+}
 
+.user{
+    display: flex;
+    align-items: flex-start;
+}
+
+.user h1.name{
+    font-weight: 800;
+    font-size: 48px;
+    margin-left: 20px;
 }
 

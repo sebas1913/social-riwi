@@ -49,9 +49,11 @@ async function crearPublicacion(URL, nuevaPublicacion) {
 
 // Función para mostrar una publicación en el DOM
 function mostrarPublicacion(publicacion) {
+    const user = JSON.parse(localStorage.getItem("user"));
     let newPost = document.createElement("div");
     newPost.classList.add("contenido");
     newPost.innerHTML = `
+        <h3>${user.name}</h3>
         <h4>${publicacion.comentario}</h4>
         <p id="time">${publicacion.tiempo}</p>
         <img src="${publicacion.imagen}" alt="Imagen del estudiante">
