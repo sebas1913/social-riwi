@@ -29,6 +29,10 @@ body {
     padding: 0;
 }
 
+#bannerMobile{
+    display: none;
+}
+
 h1 {
     font-weight: 700;
     font-size: 50px;
@@ -279,4 +283,30 @@ input {
 
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
+}
+
+@media (max-width: 900px){
+    #container {
+        width: 95%;
+    }
+    #bannerMobile{
+        display: block;
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    input{
+        border: none;
+        padding: 12px 10px;
+        margin: 8px 0;
+    }
+    h1{
+        font-size: 30px;
+    }
+    button{
+        padding: 10px 40px;
+    }
+    h1.title{
+        display: none;
+    }
+
 }

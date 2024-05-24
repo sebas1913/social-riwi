@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (data.length === 0) {
       console.error("No existe un usuario con ese email");
-      alert("No tienes cuenta, regístrate :)")
+      alert("Don't have an account, register :)")
       return;
     }
 
