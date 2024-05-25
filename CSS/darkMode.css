@@ -8,8 +8,8 @@
     background-color: var(--color-black);
 }
 
-.darkMode .mainContent .card{
-    background-color: var(--color-black-card);
+.darkMode #publicaciones-container .contenido{
+    color: var(--color-black);
 }
 
 .darkMode .mainContent .card input{

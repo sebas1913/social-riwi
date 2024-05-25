@@ -1,4 +1,3 @@
-// Variables del DOM
 const post = document.querySelector("#post");
 const publicacionesContainer = document.querySelector("#publicaciones-container");
 const modal = document.getElementById("myModal");
@@ -49,16 +48,39 @@ async function crearPublicacion(URL, nuevaPublicacion) {
 
 // Función para mostrar una publicación en el DOM
 function mostrarPublicacion(publicacion) {
+    // Traemos el item de la sesión del usuario
     const user = JSON.parse(localStorage.getItem("user"));
+
+    // Traemos el item del número de reacciones de la publicación
+    const reactions = JSON.parse(localStorage.getItem('reactions')) || {};
+    const reaccionCount = reactions[publicacion.tiempo] || 0;
+
     let newPost = document.createElement("div");
     newPost.classList.add("contenido");
     newPost.innerHTML = `
         <h3>${user.name}</h3>
         <h4>${publicacion.comentario}</h4>
         <p id="time">${publicacion.tiempo}</p>
-        <img src="${publicacion.imagen}" alt="Imagen del estudiante">
+        <img src="${publicacion.imagen}" alt="Imagen de publicación">
+        <button class="reactionButton">🚀</button>
+        <span class="counterReactions">${reaccionCount}</span>
     `;
     publicacionesContainer.appendChild(newPost);
+}
+
+// Función para manejar reacciones
+function reaccionar(event) {
+    if (event.target.classList.contains('reactionButton')) {
+        let counterSpan = event.target.nextElementSibling;
+        let count = parseInt(counterSpan.textContent);
+        count += 1;
+        counterSpan.textContent = count;
+
+        const publicacionTime = event.target.closest('.contenido').querySelector('#time').textContent;
+        const reactions = JSON.parse(localStorage.getItem('reactions')) || {};
+        reactions[publicacionTime] = count;
+        localStorage.setItem('reactions', JSON.stringify(reactions));
+    }
 }
 
 // Mostrar las publicaciones al cargar la página de manera inversa
@@ -67,6 +89,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     publicaciones.reverse().forEach(publicacion => {
         mostrarPublicacion(publicacion);
     });
+    publicacionesContainer.addEventListener('click', reaccionar);
 });
 
 // Función para mostrar el modal al hacer clic en el botón de publicar
@@ -100,12 +123,16 @@ subir.addEventListener('click', async (e) => {
     if (comment !== "" && file) {
         const reader = new FileReader();
         reader.onload = async function (event) {
+            const user = JSON.parse(localStorage.getItem("user"));
             let newPost = document.createElement("div");
             newPost.classList.add("contenido");
             newPost.innerHTML = `
+                <h3>${user.name}</h3>
                 <h4>${comment}</h4>
                 <p id="time">${obtenerTiempoActual()}</p>
-                <img src="${event.target.result}" alt="Imagen del estudiante">
+                <img src="${event.target.result}" alt="Imagen publicación">
+                <button class="reactionButton">🚀</button>
+                <span class="counterReactions">0</span>
             `;
             publicacionesContainer.insertBefore(newPost, publicacionesContainer.firstChild);
 
@@ -115,12 +142,14 @@ subir.addEventListener('click', async (e) => {
                 tiempo: obtenerTiempoActual(),
                 vida: 0,
             };
+
             // Crear la publicación en el servicio JSON
             await crearPublicacion(URL_POST, newPostData);
         };
         reader.readAsDataURL(file);
         // Cerrar el modal después de subir el contenido
         modal.style.display = "none";
+
         botonGenerarPost = true; // Reactivar el botón
     } else {
         alert("Por favor, completa todos los campos");
