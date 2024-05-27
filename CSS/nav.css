@@ -87,7 +87,7 @@ nav ul li a i{
 footer {
     text-align: center;
     color: var(--color-secundary);
-
+    margin: 10px;
 }
 
 footer p {
