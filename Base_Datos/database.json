@@ -1,12 +1,10 @@
 {
   "users": [
     {
-      "id": "f060",
-      "name": "sebastian",
-      "email": "sebas@gmail.com",
-      "password": "1234"
-    },
-    {
+      "id": "6605",
+      "name": "oscar calle",
+      "email": "oscarcalle0@gmail.com",
+      "password": "12345"
     }
   ]
 }

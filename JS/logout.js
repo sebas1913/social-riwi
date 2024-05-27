@@ -1,7 +1,7 @@
 const logout = () => {
-    localStorage.removeItem('user'); // Elimina la información del usuario del almacenamiento local
-    sessionStorage.removeItem('token'); // Elimina el token de sesión si existe
-    window.location.href = '/HTML/login.html'; // Redirige al usuario a la página de inicio de sesión
+    localStorage.removeItem('user'); //Deletes user information from local storage
+    sessionStorage.removeItem('token'); // Delete the session token if it exists
+    window.location.href = '/HTML/login.html'; // Redirect the user to the login page 
 };
 
 document.addEventListener('DOMContentLoaded', () => {

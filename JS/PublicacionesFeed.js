@@ -5,7 +5,7 @@ const post = document.querySelector("#post");
         const subir = document.getElementById("subir");
         let botonGenerarPost = true;
 
-        // Función para obtener el tiempo actual en un formato legible
+// Function to get the current time in a readable format
         function obtenerTiempoActual() {
             const ahora = new Date();
             const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
@@ -50,9 +50,9 @@ const post = document.querySelector("#post");
                 };
                 reader.readAsDataURL(file);
 
-                // Cerrar el modal después de subir el contenido
+// Close the modal after uploading the content
                 modal.style.display = "none";
-                botonGenerarPost = true; // Reactivar el botón
+                botonGenerarPost = true; // Reactivate the button
             } else {
                 alert("Por favor, completa todos los campos");
             }

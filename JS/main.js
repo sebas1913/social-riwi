@@ -65,16 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
   async function handleCredentialResponse(response) {
     const responsePayload = decodeJwtResponse(response.credential);
 
-    // Verifica si el usuario ya existe
+// Check if the user already exists
     const userResponse = await fetch(`${URL_USERS}?email=${responsePayload.email}`);
     const userData = await userResponse.json();
 
     if (userData.length === 0) {
-      // Usuario nuevo, regístralo
+// New user, register
       const newUser = {
         name: responsePayload.name,
         email: responsePayload.email,
-        password: "", // O genera un password aleatorio
+        password: "", // Or generate a random password
       };
 
       const registerResponse = await post(URL_USERS, newUser);
@@ -86,7 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Failed to register user");
       }
     } else {
-      // Usuario existente, loguearlo
+
+// Existing user, log in
       localStorage.setItem("user", JSON.stringify(userData[0]));
       window.location.href = "feed.html";
     }
@@ -102,3 +103,4 @@ document.addEventListener("DOMContentLoaded", () => {
     return JSON.parse(jsonPayload);
   }
 });
+

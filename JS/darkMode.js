@@ -13,7 +13,7 @@ function darkMode() {
 }
 
 // Check the user's preference on page load
-window.onload = function() {
+document.addEventListener("DOMContentLoaded", function() {
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('darkMode');
         document.querySelector("#changeMode").innerHTML = `<i class="fa-solid fa-circle"></i> Light mode`;
@@ -21,4 +21,4 @@ window.onload = function() {
         document.body.classList.remove('darkMode');
         document.querySelector("#changeMode").innerHTML = `<i class="fa-solid fa-circle"></i> Dark mode`;
     }
-}
+})
