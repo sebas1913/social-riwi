@@ -36,11 +36,14 @@ function mostrarPublicacion(publicacion) {
     if (publicacion.email === currentUser.email) {
         let newPost = document.createElement("div");
         newPost.classList.add("contenido");
+        newPost.dataset.id = publicacion.id; 
         newPost.innerHTML = `
+            <button class="delete"><i class="fa-solid fa-trash"></i></button>
             <h3>${publicacion.user}</h3>
             <h4>${publicacion.comentario}</h4>
             <p>${publicacion.tiempo}</p>
             <img src="${publicacion.imagen}" alt="Imagen del estudiante">
+
         `;
         publicacionesContainer.appendChild(newPost);
     }
@@ -58,7 +61,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     userPosts.reverse();
 
     // Mostrar las publicaciones filtradas
-    userPosts.forEach(publicacion => {
-        mostrarPublicacion(publicacion);
+    userPosts.forEach(publication => {
+        mostrarPublicacion(publication);
+    });
+
+    publicacionesContainer.addEventListener('click', async (e) => {
+        if (e.target.classList.contains('delete')) {
+            const postId = e.target.parentElement.dataset.id; // Get ID publication
+            const confirmation = confirm("Are you sure you want to delete this publication??");
+            if (confirmation) {
+                // Remove publication from the DOM
+                e.target.parentElement.remove();
+                
+                // Remove publication from JSON service
+                const response = await fetch(`${URL_POST}/${postId}`, {
+                    method: 'DELETE',
+                });
+                if (!response.ok) {
+                    console.error('Error :(');
+                }
+            }
+        }
     });
 });

@@ -63,6 +63,27 @@ body{
     padding: 0;
 }
 
+.delete{
+    color: var(--color-secundary);
+    background-color: transparent;
+    cursor: pointer;
+    font-family: var(--font-principal);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    float: right;
+}
+
+.delete i{
+    color: var(--color-black);
+    font-size: 22px;
+
+}
+
+.delete i:hover{
+    color: red;
+}
+
 .counterReactions{
     font-weight: 700;
     font-size: 17px;
