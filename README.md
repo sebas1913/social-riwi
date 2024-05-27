@@ -22,32 +22,34 @@ Desarrollar una red social para el clan Berners Lee de nuestro centro de entrena
 En el contexto del centro de entrenamiento, la falta de una plataforma dedicada limita la interacción y publicación efectiva entre los miembros del clan y otros clanes, así como la posibilidad de compartir información relacionada a la programación.
 
 ### Objetivos Específicos
-- Crear una plataforma interactiva que permita a los miembros del clan Riwi compartir publicaciones e imágenes de proyectos.
-- Facilitar la interacción entre los diferentes clanes dentro del centro de entrenamiento.
-- Fomentar la colaboración y la interacción entre los miembros.
+- Publicación de Contenido.
+- Desarrollo de Perfiles de Usuario.
+- Facilitar la interacción y colaboración
+- Promover el aprendizaje.
 
 ### Alcance del Proyecto
 El desarrollo inicial se centrará en la implementación de la red social para el clan Berners Lee. Posteriormente, se tiene la intención de expandir la plataforma para servir a todo el centro de entrenamiento Riwi, ofreciendo una herramienta integral para la interacción entre todos los miembros, y crear una comunidad en línea donde desarrolladores de software puedan conectar, colaborar, compartir conocimientos, encontrar oportunidades laborales y proyectos.
 
 ## Historias de Usuario
 ### Perfiles de Usuario
-- Creación de perfiles individuales para cada miembro del clan Riwi con información básica (nombre, biografía, intereses, skills) y foto de perfil.
-- Capacidad de editar y actualizar el perfil de usuario.
+- Creación de Perfil de Usuario
+- Visualización de Perfil de Usuario
+- Edición de Perfil de Usuario
+- Eliminación de Perfil de Usuario
 
 ### Publicaciones
-- Capacidad para publicar contenido como texto, imágenes y videos relacionados con proyectos de programación.
+- Creación de Publicaciones
+- Visualización de Publicaciones
+- Reaccionar a publicaciones
 
-### Privacidad y Seguridad
-- Implementación de medidas de seguridad para proteger la privacidad de los usuarios y garantizar un entorno seguro en línea.
-- Opciones de privacidad para controlar quién puede ver las publicaciones y el perfil del usuario.
+### Autenticación de usuario
+- Registro de Usuario
+- Inicio de Sesión
+- Cierre de Sesión
 
-### Búsqueda y Exploración
-- Capacidad de buscar y explorar publicaciones y perfiles de otros usuarios.
-- Sugerencias de contenido y usuarios relacionados basados en intereses y actividad.
 
-### Gestión de Proyectos
-- Capacidad de crear y administrar proyectos colaborativos dentro de la red social.
-- Asignación de tareas y seguimiento del progreso de los proyectos.
+### Aplicación
+- Modo Oscuro
 
 ## Requisitos Funcionales
 ### Escalabilidad
