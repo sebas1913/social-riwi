@@ -1,5 +1,5 @@
 import { post, get } from "./clientHTTP.js";
-import { URL_USERS } from "./URLS.js";
+import { URL_USERS } from "../URLS.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   const registerButton = document.getElementById("register");
