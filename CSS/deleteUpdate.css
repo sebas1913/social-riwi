@@ -17,15 +17,17 @@
 .mainContent .card p{
     color: var(--color-primary);
     font-weight: 800;
+    font-size: 20px;
 }
 
 .mainContent .card input{
     border: none;
-    border-bottom: 4px solid var(--color-primary);
+    border-bottom: 3px solid var(--color-primary);
     outline: none;
-    font-size: 17px;
+    font-size: 18px;
     margin-top: 5px;
     margin-bottom: 20px;
+    padding: 7px;
     font-family: "PT Sans", sans-serif;
     display: block;
     width: 100%;
@@ -36,9 +38,10 @@
 }
 
 .mainContent .card img{
-    margin-top: 20px;
-    width: 180px;
+    margin-top: 0px;
+    width: 150px;
     position: absolute;
+    top: 72%;
     right: 0;
 }
 
@@ -52,7 +55,7 @@
     }
     .mainContent .card{
         margin: 0 auto;
-        width: 70%;
+        width: 65%;
     }
     .mainContent .card input{
         width: 100%;

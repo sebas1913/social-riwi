@@ -77,7 +77,7 @@
 #publicaciones-container .contenido{
     background-color: var(--color-secundary);
     border-radius: 20px;
-    width: 65%;
+    width: 75%;
     padding: 30px;
     overflow: hidden;
 }
