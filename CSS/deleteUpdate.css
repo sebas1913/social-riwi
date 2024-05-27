@@ -1,16 +1,17 @@
 .mainContent h1{
-    font-size: 65px;
+    font-size: 55px;
     color: var(--color-secundary);
-    margin-left: 70px;
+    margin-left: 120px;
 }
 
 .mainContent .card{
     width: 45%;
     background-color: var(--color-secundary);
     border-radius: 20px;
-    margin-left: 70px;
+    margin-left: 120px;
     padding: 40px 50px;
     position: relative;
+    margin-bottom: 130px;
 }
 
 .mainContent .card p{

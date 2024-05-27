@@ -1,5 +1,5 @@
 .mainContent h1{
-    font-size: 65px;
+    font-size: 55px;
     color: var(--color-secundary);
     margin-left: 120px;
     
@@ -13,6 +13,7 @@
     padding: 50px 60px;
     position: relative;
     text-decoration: none;
+    margin-bottom: 130px;
     
 }
 
