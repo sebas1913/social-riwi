@@ -58,7 +58,8 @@ function mostrarPublicacion(publicacion) {
     let newPost = document.createElement("div");
     newPost.classList.add("contenido");
     newPost.innerHTML = `
-        <h3>${user.name}</h3>
+        <h3>${publicacion.user}</h3>
+        <h5>${publicacion.email}</h5>
         <h4>${publicacion.comentario}</h4>
         <p id="time">${publicacion.tiempo}</p>
         <img src="${publicacion.imagen}" alt="Imagen de publicación">
@@ -135,11 +136,13 @@ subir.addEventListener('click', async (e) => {
                 <span class="counterReactions">0</span>
             `;
             publicacionesContainer.insertBefore(newPost, publicacionesContainer.firstChild);
-
+            const user = JSON.parse(localStorage.getItem("user"));
             const newPostData = {
                 imagen: event.target.result, // Aquí guardamos la imagen en base64 como texto plano
                 comentario: comment,
                 tiempo: obtenerTiempoActual(),
+                email: user.email,
+                user: user.name,
                 vida: 0,
             };
 
