@@ -23,26 +23,31 @@ body{
     font-size: 30px;
     color: var(--color-primary);
     margin-bottom: 0;
+    letter-spacing: -1px;
 }
 
 .mainContent .card {
-    text-align: center;
     margin: 0 auto;
-    width: 60%;
+    width: 75%;
     background-color: var(--color-secundary);
     border-radius: 20px;
     padding: 30px;
 }
 
 .user img{
-    height: 110px;
-    width: 110px;
+    height: 130px;
+    width: 130px;
     border-radius: 50%;
     background-color: var(--color-primary);
 }
 
 .user{
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
+}
+
+.user div{
+    margin-left: 20px;
 }
 
 .user h1.name{
@@ -50,6 +55,7 @@ body{
     font-size: 40px;
     margin-left: 20px;
     margin: 0;
+
 }
 
 .user h1.email{
