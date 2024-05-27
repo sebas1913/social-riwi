@@ -29,6 +29,10 @@ body {
     padding: 0;
 }
 
+#bannerMobile{
+    display: none;
+}
+
 h1 {
     font-weight: 700;
     font-size: 50px;
@@ -41,9 +45,8 @@ h1.title {
     background-color: rgb(0, 0, 0, 0.3);
     width: 80%;
     font-weight: 500;
-    font-size: 45px;
+    font-size: 40px;
     font-family: "Jersey 15", sans-serif;
-
 }
 
 p {
@@ -154,7 +157,7 @@ input {
     width: 60%;
     height: 60%;
     max-width: 100%;
-    min-height: 500px;
+    min-height: 450px;
 }
 
 .form-container { 
@@ -279,4 +282,39 @@ input {
 
 .container.right-panel-active .overlay-right {
     transform: translateX(20%);
+}
+
+@media (max-width: 900px){
+    body{
+        height: auto;
+    }
+    .container{
+        width: 95%;
+        height: 20%;
+    }
+    #bannerMobile{
+        display: block;
+        width: 100px;
+        margin-bottom: 20px;
+    }
+    form{
+        padding: 5px;
+    }
+    input{
+        border: none;
+        padding: 12px 10px;
+        margin: 8px 0;
+        width: 100%;
+        text-align: center;
+    }
+    h1{
+        font-size: 30px;
+    }
+    button{
+        padding: 10px 40px;
+    }
+    h1.title{
+        display: none;
+    }
+
 }

@@ -1,7 +1,7 @@
 .mainContent h1{
     font-size: 65px;
     color: var(--color-secundary);
-    margin-left: 70px;
+    margin-left: 120px;
     
 }
 
@@ -9,7 +9,7 @@
     width: 45%;
     background-color: var(--color-secundary);
     border-radius: 20px;
-    margin-left: 70px;
+    margin-left: 120px;
     padding: 50px 60px;
     position: relative;
     text-decoration: none;
@@ -22,6 +22,7 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
+    cursor: pointer;
 }
     
 
@@ -53,33 +54,33 @@
         text-align: center;
     }
 
-.mainContent .card {
-    width: 70%;
-    background-color: var(--color-secundary);
-    border-radius: 20px;
-    padding: 50px 30px;
-    position: relative;
-    text-decoration: none;
-    margin: 0 auto;  
-}
+    .mainContent .card {
+        width: 70%;
+        background-color: var(--color-secundary);
+        border-radius: 20px;
+        padding: 50px 30px;
+        position: relative;
+        text-decoration: none;
+        margin: 0 auto;  
+    }
 
-.mainContent .card img{
-    margin-top: 0;
-    top: 65%;
-    width: 140px;
-    position: absolute;
-    right: 0;
-}
-
-
-.card ul li a {
-    font-size: 15px;
-}
+    .mainContent .card img{
+        margin-top: 0;
+        top: 65%;
+        width: 140px;
+        position: absolute;
+        right: 0;
+    }
 
 
-.card ul li a i{
-    font-size: 22px;
-}
+    .card ul li a {
+        font-size: 15px;
+    }
+
+
+    .card ul li a i{
+        font-size: 22px;
+    }
 
 }
 

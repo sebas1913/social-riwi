@@ -1,10 +1,9 @@
 {
-  "users": [
-    {
-      "id": "6605",
-      "name": "oscar calle",
-      "email": "oscarcalle0@gmail.com",
-      "password": "12345"
-    }
+  "users":[
+
+  ],
+  "post":[
+    
   ]
+
 }

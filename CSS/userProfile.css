@@ -23,33 +23,38 @@ body{
     font-size: 30px;
     color: var(--color-primary);
     margin-bottom: 0;
-    
-}
-
-.mainContent h2 {
-    font-size: 20px;
-    color: var(--color-primary);
-    margin-top: 0;
 }
 
 .mainContent .card {
     text-align: center;
-    width: 55%;
-    background-color: var(--color-secondary);
+    margin: 0 auto;
+    width: 60%;
+    background-color: var(--color-secundary);
     border-radius: 20px;
-    padding: 10px 60px;
-    position: relative;
-    text-decoration: none;
-    margin-left: 90px;
-    
-
+    padding: 30px;
 }
 
 .user img{
-    height: 100px;
-    width: 100px;
-    border-radius: 50px;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
     background-color: var(--color-primary);
+}
 
+.user{
+    align-items: flex-start;
+}
+
+.user h1.name{
+    font-weight: 800;
+    font-size: 40px;
+    margin-left: 20px;
+    margin: 0;
+}
+
+.user h1.email{
+    margin: 0;
+    font-size: 20px;
+    cursor: pointer;
 }
 

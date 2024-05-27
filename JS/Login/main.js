@@ -1,4 +1,4 @@
-import { post } from "./clientHTTP.js";
+import { post, get } from "./clientHTTP.js";
 import { URL_USERS } from "./URLS.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -25,13 +25,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (data.length === 0) {
       console.error("No existe un usuario con ese email");
-      alert("No tienes cuenta, regístrate :)")
+      alert("No existe un usuario con ese email");
       return;
     }
 
     if (data[0].password !== password.value) {
       console.error("Password incorrecta");
-      alert("Incorrect password")
+      alert("Password incorrecta");
       return;
     }
 
@@ -47,6 +47,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
   formRegister.addEventListener("submit", async function (event) {
     event.preventDefault();
+    
+    // Verificar si el usuario ya existe
+    const existingUserResponse = await get(`${URL_USERS}?email=${registerEmail.value}`);
+    if (existingUserResponse.length > 0) {
+      const alertDiv = document.createElement("div");
+      alertDiv.classList.add("alert");
+      alertDiv.innerText = "¡El usuario ya está registrado! Intenta con otro email.";
+      
+      // Insertar el mensaje de alerta antes del formulario de registro
+      formRegister.parentNode.insertBefore(alertDiv, formRegister.nextSibling);
+      
+      // Detener la ejecución para evitar que se envíe el formulario
+      return;
+    }
+
     const user = {
       name: registerName.value,
       email: registerEmail.value,
