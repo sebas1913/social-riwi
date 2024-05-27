@@ -4,11 +4,23 @@ import { URL_USERS } from "./URLS.js";
 // Event on page load
 document.addEventListener("DOMContentLoaded", () => {
     const updateUserButton = document.getElementById("updateUserButton");
+    const updateUserForm = document.getElementById("updateUserForm");
 
-    updateUserButton.addEventListener("click", async () => {
-        const newUsername = document.querySelector("#newUsername").value;
-        const newEmail = document.querySelector("#newEmail").value;
+    updateUserForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const newUsername = document.querySelector("#newUsername").value.trim();
+        const newEmail = document.querySelector("#newEmail").value.trim();
         const user = JSON.parse(localStorage.getItem("user"));
+
+        if (!newUsername && !newEmail) {
+            Swal.fire({
+                icon: "warning",
+                title: "Warning",
+                text: "At least one field (username or email) must be filled.",
+            });
+            return;
+        }
 
         if (user && user.id) {
             const userId = user.id;
@@ -29,11 +41,15 @@ async function updateUser(userId, newUsername, newEmail) {
         }
         const userData = await userResponse.json();
 
-        // Update name and email fields
-        userData.name = newUsername;
-        userData.email = newEmail;
-        
-        // Send the PUT request with all the user data
+        // Update only fields that are not empty
+        if (newUsername) {
+            userData.name = newUsername;
+        }
+        if (newEmail) {
+            userData.email = newEmail;
+        }
+
+        // Send the PUT request with the updated user data
         const response = await fetch(`${URL_USERS}/${userId}`, {
             method: "PUT",
             headers: {
@@ -49,15 +65,15 @@ async function updateUser(userId, newUsername, newEmail) {
         // Update localStorage with the new user data
         localStorage.setItem("user", JSON.stringify(userData));
 
-        // Redirect the user to their profile
-        window.location.href = "/HTML/profileUser.html";
-
         // Notify the user about the success of the operation
         Swal.fire({
             icon: "success",
             title: "Success",
             text: "User data updated successfully."
         });
+
+        // Redirect the user to their profile
+        window.location.href = "/HTML/profileUser.html";
 
     } catch (error) {
         console.error("Error updating user data:", error);
