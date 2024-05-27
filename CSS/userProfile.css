@@ -28,27 +28,33 @@ body{
 .mainContent .card {
     text-align: center;
     margin: 0 auto;
-    width: 55%;
+    width: 60%;
     background-color: var(--color-secundary);
     border-radius: 20px;
     padding: 30px;
 }
 
 .user img{
-    height: 130px;
-    width: 130px;
+    height: 110px;
+    width: 110px;
     border-radius: 50%;
     background-color: var(--color-primary);
 }
 
 .user{
-    display: flex;
     align-items: flex-start;
 }
 
 .user h1.name{
     font-weight: 800;
-    font-size: 48px;
+    font-size: 40px;
     margin-left: 20px;
+    margin: 0;
+}
+
+.user h1.email{
+    margin: 0;
+    font-size: 20px;
+    cursor: pointer;
 }
 
