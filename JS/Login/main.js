@@ -44,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const registerName = document.getElementById("registerName");
   const registerEmail = document.getElementById("registerEmail");
   const registerPassword = document.getElementById("registerPassword");
+  const registerSkills = document.getElementById("registerSkills");
+
 
   formRegister.addEventListener("submit", async function (event) {
     event.preventDefault();
@@ -66,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name: registerName.value,
       email: registerEmail.value,
       password: registerPassword.value,
+      skills: registerSkills.value,
     };
 
     const response = await post(URL_USERS, user);
@@ -90,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
         name: responsePayload.name,
         email: responsePayload.email,
         password: "", // Or generate a random password
+        skills : "",
       };
 
       const registerResponse = await post(URL_USERS, newUser);

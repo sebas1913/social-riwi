@@ -2,8 +2,11 @@ const nameContainer = document.querySelector(".name");
 const user = JSON.parse(localStorage.getItem("user"));
 const emailContainer = document.querySelector(".email");
 const email = JSON.parse(localStorage.getItem("user"));
+const skillsContainer = document.querySelector(".skills");
+const skills = JSON.parse(localStorage.getItem("user"));
 nameContainer.textContent = user.name;
 emailContainer.textContent = user.email;
+skillsContainer.textContent = user.skills;
 
 // Variables del DOM
 const publicacionesContainer = document.querySelector("#publicaciones-container");

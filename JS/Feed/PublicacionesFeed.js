@@ -1,12 +1,11 @@
+import { URL_POST } from "../URLS.js";
+
 const post = document.querySelector("#post");
 const publicacionesContainer = document.querySelector("#publicaciones-container");
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 const subir = document.getElementById("subir");
 let botonGenerarPost = true;
-
-// URL del servicio JSON
-const URL_POST = "http://localhost:3000/post";
 
 // Función para obtener el tiempo actual en un formato legible
 function obtenerTiempoActual() {
