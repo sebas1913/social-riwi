@@ -3,7 +3,7 @@
 
   if (!user) {
     window.location.href = "login.html";
-    alert('Inicia sesión')
+    alert('You must log in :(')
   }
 })();
 
