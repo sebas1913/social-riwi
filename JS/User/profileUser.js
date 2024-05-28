@@ -8,35 +8,35 @@ nameContainer.textContent = user.name;
 emailContainer.textContent = user.email;
 skillsContainer.textContent = user.skills;
 
-// Variables del DOM
-const publicacionesContainer = document.querySelector("#publicaciones-container");
+// DOM variables
+const publicationsContainer = document.querySelector("#publicaciones-container");
 
-// URL del servicio JSON de publicaciones
+// JSON service URL for posts
 const URL_POST = "http://localhost:3000/post";
 
-// URL del servicio JSON de usuarios
+// JSON service URL for users
 const URL_USERS = "http://localhost:3000/users";
 
-// Función para obtener publicaciones del servicio JSON
-async function obtenerPublicaciones(URL) {
+// Function to fetch posts from JSON service
+async function fetchPosts(URL) {
     const response = await fetch(URL);
     const data = await response.json();
     return data;
 }
 
-// Función para obtener usuarios del servicio JSON
-async function obtenerUsuarios(URL) {
+// Function to fetch users from JSON service
+async function fetchUsers(URL) {
     const response = await fetch(URL);
     const data = await response.json();
     return data;
 }
 
-// Función para mostrar una publicación en el DOM
-function mostrarPublicacion(publicacion) {
+// Function to display a post in the DOM
+function displayPost(post) {
     const currentUser = JSON.parse(localStorage.getItem("user"));
     
-    // Verificar si el email de la publicación coincide con el email del usuario actual
-    if (publicacion.email === currentUser.email) {
+    // Check if the email of the post matches the email of the current user
+    if (post.email === currentUser.email) {
         let newPost = document.createElement("div");
         newPost.classList.add("contenido");
         newPost.dataset.id = publicacion.id; 
@@ -48,19 +48,19 @@ function mostrarPublicacion(publicacion) {
             <img src="${publicacion.imagen}" alt="Imagen del estudiante">
 
         `;
-        publicacionesContainer.appendChild(newPost);
+        publicationsContainer.appendChild(newPost);
     }
 }
 
-// Mostrar las publicaciones al cargar la página
+// Display posts when the page loads
 document.addEventListener('DOMContentLoaded', async () => {
-    const [publicaciones, usuarios] = await Promise.all([obtenerPublicaciones(URL_POST), obtenerUsuarios(URL_USERS)]);
+    const [posts, users] = await Promise.all([fetchPosts(URL_POST), fetchUsers(URL_USERS)]);
     
-    // Filtrar las publicaciones por el email del usuario actual
+    // Filter posts by the email of the current user
     const currentUser = JSON.parse(localStorage.getItem("user"));
-    const userPosts = publicaciones.filter(post => post.email === currentUser.email);
+    const userPosts = posts.filter(post => post.email === currentUser.email);
 
-    // Invertir el orden de las publicaciones
+    // Reverse the order of posts
     userPosts.reverse();
 
     // Mostrar las publicaciones filtradas
