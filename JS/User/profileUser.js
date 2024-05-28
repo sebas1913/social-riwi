@@ -41,7 +41,7 @@ function mostrarPublicacion(publicacion) {
         newPost.classList.add("contenido");
         newPost.dataset.id = publicacion.id; 
         newPost.innerHTML = `
-            <button class="delete"><i class="fa-solid fa-trash"></i></button>
+            <button class="delete">❌</button>
             <h3>${publicacion.user}</h3>
             <h4>${publicacion.comentario}</h4>
             <p>${publicacion.tiempo}</p>
