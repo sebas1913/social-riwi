@@ -2,7 +2,6 @@ import { URL_USERS } from "./URLS.js";
 
 // Event on page load
 document.addEventListener("DOMContentLoaded", () => {
-    const updateSkillsButton = document.getElementById("updateSkillsButton");
     const updateSkillsForm = document.getElementById("updateSkillsForm");
 
     updateSkillsForm.addEventListener("submit", async (event) => {
@@ -39,7 +38,7 @@ async function updateSkills(userId, newSkills) {
         }
         const userData = await userResponse.json();
 
-        // Update only the password field
+        // Update only the skills field
         if (newSkills) {
             userData.skills = newSkills;
         }
