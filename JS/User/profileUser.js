@@ -1,3 +1,6 @@
+import { URL_POST, URL_USERS } from "../URLS.js";
+
+
 const nameContainer = document.querySelector(".name");
 const user = JSON.parse(localStorage.getItem("user"));
 const emailContainer = document.querySelector(".email");
@@ -8,35 +11,30 @@ nameContainer.textContent = user.name;
 emailContainer.textContent = user.email;
 skillsContainer.textContent = user.skills;
 
-// DOM variables
-const publicationsContainer = document.querySelector("#publicaciones-container");
+// Variables del DOM
+const publicacionesContainer = document.querySelector("#publicaciones-container");
 
-// JSON service URL for posts
-const URL_POST = "http://localhost:3000/post";
 
-// JSON service URL for users
-const URL_USERS = "http://localhost:3000/users";
-
-// Function to fetch posts from JSON service
-async function fetchPosts(URL) {
+// Función para obtener publicaciones del servicio JSON
+async function obtenerPublicaciones(URL) {
     const response = await fetch(URL);
     const data = await response.json();
     return data;
 }
 
-// Function to fetch users from JSON service
-async function fetchUsers(URL) {
+// Función para obtener usuarios del servicio JSON
+async function obtenerUsuarios(URL) {
     const response = await fetch(URL);
     const data = await response.json();
     return data;
 }
 
-// Function to display a post in the DOM
-function displayPost(post) {
+// Función para mostrar una publicación en el DOM
+function mostrarPublicacion(publicacion) {
     const currentUser = JSON.parse(localStorage.getItem("user"));
     
-    // Check if the email of the post matches the email of the current user
-    if (post.email === currentUser.email) {
+    // Verificar si el email de la publicación coincide con el email del usuario actual
+    if (publicacion.email === currentUser.email) {
         let newPost = document.createElement("div");
         newPost.classList.add("contenido");
         newPost.dataset.id = publicacion.id; 
@@ -48,19 +46,19 @@ function displayPost(post) {
             <img src="${publicacion.imagen}" alt="Imagen del estudiante">
 
         `;
-        publicationsContainer.appendChild(newPost);
+        publicacionesContainer.appendChild(newPost);
     }
 }
 
-// Display posts when the page loads
+// Mostrar las publicaciones al cargar la página
 document.addEventListener('DOMContentLoaded', async () => {
-    const [posts, users] = await Promise.all([fetchPosts(URL_POST), fetchUsers(URL_USERS)]);
+    const [publicaciones, usuarios] = await Promise.all([obtenerPublicaciones(URL_POST), obtenerUsuarios(URL_USERS)]);
     
-    // Filter posts by the email of the current user
+    // Filtrar las publicaciones por el email del usuario actual
     const currentUser = JSON.parse(localStorage.getItem("user"));
-    const userPosts = posts.filter(post => post.email === currentUser.email);
+    const userPosts = publicaciones.filter(post => post.email === currentUser.email);
 
-    // Reverse the order of posts
+    // Invertir el orden de las publicaciones
     userPosts.reverse();
 
     // Mostrar las publicaciones filtradas

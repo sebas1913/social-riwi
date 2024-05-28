@@ -152,6 +152,6 @@ subir.addEventListener('click', async (e) => {
 
         botonGenerarPost = true; // Reactivar el botón
     } else {
-        alert("Por favor, completa todos los campos");
+        alert("Please complete all fields");
     }
 });

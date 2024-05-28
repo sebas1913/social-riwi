@@ -76,7 +76,6 @@ async function updateSkills(userId, newSkills) {
             icon: "error",
             title: "Oops...",
             text: "Failed to update skills.",
-            footer: '<a href="#">Why do I have this issue?</a>'
         });
     }
 }

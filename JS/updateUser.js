@@ -10,21 +10,20 @@ document.addEventListener("DOMContentLoaded", () => {
         event.preventDefault();
 
         const newUsername = document.querySelector("#newUsername").value.trim();
-        const newEmail = document.querySelector("#newEmail").value.trim();
         const user = JSON.parse(localStorage.getItem("user"));
 
-        if (!newUsername && !newEmail) {
+        if (!newUsername) {
             Swal.fire({
                 icon: "warning",
                 title: "Warning",
-                text: "At least one field (username or email) must be filled.",
+                text: "At least one field (username) must be filled.",
             });
             return;
         }
 
         if (user && user.id) {
             const userId = user.id;
-            await updateUser(userId, newUsername, newEmail);
+            await updateUser(userId, newUsername);
         } else {
             console.error("User ID not found in localStorage.");
         }
@@ -32,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to update user data
-async function updateUser(userId, newUsername, newEmail) {
+async function updateUser(userId, newUsername) {
     try {
         // Get the current user data
         const userResponse = await fetch(`${URL_USERS}/${userId}`);
@@ -45,9 +44,7 @@ async function updateUser(userId, newUsername, newEmail) {
         if (newUsername) {
             userData.name = newUsername;
         }
-        if (newEmail) {
-            userData.email = newEmail;
-        }
+
 
         // Send the PUT request with the updated user data
         const response = await fetch(`${URL_USERS}/${userId}`, {

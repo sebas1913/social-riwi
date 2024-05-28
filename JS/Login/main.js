@@ -24,14 +24,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
 
     if (data.length === 0) {
-      console.error("No existe un usuario con ese email");
-      alert("No existe un usuario con ese email");
+      console.error("There is no user with this email address");
+      alert("There is no user with this email address");
       return;
     }
 
     if (data[0].password !== password.value) {
-      console.error("Password incorrecta");
-      alert("Password incorrecta");
+      console.error("Password incorrect");
+      alert("Password incorrect");
       return;
     }
 

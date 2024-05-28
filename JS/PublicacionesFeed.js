@@ -54,6 +54,6 @@ const post = document.querySelector("#post");
                 modal.style.display = "none";
                 botonGenerarPost = true; // Reactivate the button
             } else {
-                alert("Por favor, completa todos los campos");
+                alert("Please complete all fields");
             }
 });
