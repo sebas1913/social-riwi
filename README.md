@@ -89,7 +89,7 @@ Se seguirá una metodología ágil, como Scrum, para el desarrollo iterativo e i
 - Se implementarán pruebas de seguridad para identificar y mitigar posibles vulnerabilidades.
 
 ## Diagrama de flujo
-![Diagrama de flujo](IMG/Diagram.jpg)
+https://www.canva.com/design/DAGGnmGH044/GNfjpx7E4Cy9wRB4cqHALA/view?utm_content=DAGGnmGH044&utm_campaign=designshare&utm_medium=link&utm_source=editor
 
 ## Prototipo
 ![Diagrama de flujo](IMG/Login.png)
