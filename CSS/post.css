@@ -68,13 +68,13 @@
     cursor: pointer;
 }
 
-#publicaciones-container .contenido{
+#publications-container .content{
     margin: 0 auto;
     margin-bottom: 30px;
     margin-top: 30px;
 }
 
-#publicaciones-container .contenido{
+#publications-container .content{
     background-color: var(--color-secundary);
     border-radius: 20px;
     width: 75%;
@@ -82,18 +82,18 @@
     overflow: hidden;
 }
 
-#publicaciones-container .contenido img {
+#publications-container .content img {
     width: 100%; 
     max-height: 350px;
     object-fit: contain;
     border-radius: 10px;
     margin-bottom: 10px;
 }
-#publicaciones-container .contenido img{
+#publications-container .content img{
     width: 100%;
 }
 
-#publicaciones-container .contenido h4, p{
+#publications-container .content h4, p{
     margin: 0;
 }
 

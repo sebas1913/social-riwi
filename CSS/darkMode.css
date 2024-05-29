@@ -8,7 +8,7 @@
     background-color: var(--color-black);
 }
 
-.darkMode #publicaciones-container .contenido{
+.darkMode #publications-container .content{
     color: var(--color-black);
 }
 
