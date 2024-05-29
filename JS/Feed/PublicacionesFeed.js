@@ -14,17 +14,6 @@ function obtenerTiempoActual() {
     return ahora.toLocaleDateString('es-ES', opciones);
 }
 
-// Función para hacer una solicitud POST al servicio JSON
-async function postt(URL, contentData) {
-    const response = await fetch(URL, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(contentData),
-    });
-    return response;
-}
 
 // Función para obtener publicaciones del servicio JSON
 async function obtenerPublicaciones(URL) {
