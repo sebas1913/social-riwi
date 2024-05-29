@@ -1,29 +1,28 @@
 import { URL_POST } from "../URLS.js";
 
 const post = document.querySelector("#post");
-const publicacionesContainer = document.querySelector("#publicaciones-container");
+const postsContainer = document.querySelector("#publications-container");
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
-const subir = document.getElementById("subir");
+const upload = document.getElementById("upload");
 let botonGenerarPost = true;
 
 // Función para obtener el tiempo actual en un formato legible
-function obtenerTiempoActual() {
+function getCurrentTime() {
     const ahora = new Date();
     const opciones = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-    return ahora.toLocaleDateString('es-ES', opciones);
+    return ahora.toLocaleDateString('en-US', opciones);
 }
 
-
 // Función para obtener publicaciones del servicio JSON
-async function obtenerPublicaciones(URL) {
+async function getPosts(URL) {
     const response = await fetch(URL);
     const data = await response.json();
     return data;
 }
 
 // Función para crear una nueva publicación en el servicio JSON y en el DOM
-async function crearPublicacion(URL, nuevaPublicacion) {
+async function createPublication(URL, nuevaPublicacion) {
     const response = await fetch(URL, {
         method: "POST",
         headers: {
@@ -35,36 +34,36 @@ async function crearPublicacion(URL, nuevaPublicacion) {
 }
 
 // Función para mostrar una publicación en el DOM
-function mostrarPublicacion(publicacion) {
+function showPublication(publications) {
     // Traemos el item de la sesión del usuario
     const user = JSON.parse(localStorage.getItem("user"));
 
     // Traemos el item del número de reacciones de la publicación
     const reactions = JSON.parse(localStorage.getItem('reactions')) || {};
-    const reaccionCount = reactions[publicacion.tiempo] || 0;
+    const reaccionCount = reactions[publications.tiempo] || 0;
 
     let newPost = document.createElement("div");
-    newPost.classList.add("contenido");
+    newPost.classList.add("content");
     newPost.innerHTML = `
-        <h3>${publicacion.user}</h3>
-        <h4>${publicacion.comentario}</h4>
-        <p id="time">${publicacion.tiempo}</p>
-        <img src="${publicacion.imagen}" alt="Imagen de publicación">
+        <h3>${publications.user}</h3>
+        <h4>${publications.comment}</h4>
+        <p id="time">${publications.time}</p>
+        <img src="${publications.image}" alt="Imagen de publicación">
         <button class="reactionButton">🚀</button>
         <span class="counterReactions">${reaccionCount}</span>
     `;
-    publicacionesContainer.appendChild(newPost);
+    postsContainer.appendChild(newPost);
 }
 
 // Función para manejar reacciones
-function reaccionar(event) {
+function react(event) {
     if (event.target.classList.contains('reactionButton')) {
         let counterSpan = event.target.nextElementSibling;
         let count = parseInt(counterSpan.textContent);
         count += 1;
         counterSpan.textContent = count;
 
-        const publicacionTime = event.target.closest('.contenido').querySelector('#time').textContent;
+        const publicacionTime = event.target.closest('.content').querySelector('#time').textContent;
         const reactions = JSON.parse(localStorage.getItem('reactions')) || {};
         reactions[publicacionTime] = count;
         localStorage.setItem('reactions', JSON.stringify(reactions));
@@ -73,11 +72,11 @@ function reaccionar(event) {
 
 // Mostrar las publicaciones al cargar la página de manera inversa
 document.addEventListener('DOMContentLoaded', async () => {
-    const publicaciones = await obtenerPublicaciones(URL_POST);
-    publicaciones.reverse().forEach(publicacion => {
-        mostrarPublicacion(publicacion);
+    const publications = await getPosts(URL_POST);
+    publications.reverse().forEach(publicacion => {
+        showPublication(publicacion);
     });
-    publicacionesContainer.addEventListener('click', reaccionar);
+    postsContainer.addEventListener('click', react);
 });
 
 // Función para mostrar el modal al hacer clic en el botón de publicar
@@ -101,7 +100,7 @@ window.onclick = function (event) {
 }
 
 // Función para subir una publicación al hacer clic en el botón de subir
-subir.addEventListener('click', async (e) => {
+upload.addEventListener('click', async (e) => {
     e.preventDefault();
     let fileInput = document.querySelector("#foto");
     let file = fileInput.files[0];
@@ -113,27 +112,26 @@ subir.addEventListener('click', async (e) => {
         reader.onload = async function (event) {
             const user = JSON.parse(localStorage.getItem("user"));
             let newPost = document.createElement("div");
-            newPost.classList.add("contenido");
+            newPost.classList.add("content");
             newPost.innerHTML = `
                 <h3>${user.name}</h3>
                 <h4>${comment}</h4>
-                <p id="time">${obtenerTiempoActual()}</p>
+                <p id="time">${getCurrentTime()}</p>
                 <img src="${event.target.result}" alt="Imagen publicación">
                 <button class="reactionButton">🚀</button>
                 <span class="counterReactions">0</span>
             `;
-            publicacionesContainer.insertBefore(newPost, publicacionesContainer.firstChild);
+            postsContainer.insertBefore(newPost, postsContainer.firstChild);
             const newPostData = {
-                imagen: event.target.result, // Aquí guardamos la imagen en base64 como texto plano
-                comentario: comment,
-                tiempo: obtenerTiempoActual(),
+                image: event.target.result, // Aquí guardamos la imagen en base64 como texto plano
+                comment: comment,
+                time: getCurrentTime(),
                 email: user.email,
                 user: user.name,
-                vida: 0,
             };
 
             // Crear la publicación en el servicio JSON
-            await crearPublicacion(URL_POST, newPostData);
+            await createPublication(URL_POST, newPostData);
         };
         reader.readAsDataURL(file);
         // Cerrar el modal después de subir el contenido
